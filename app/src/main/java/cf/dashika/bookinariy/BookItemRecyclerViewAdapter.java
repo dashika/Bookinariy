@@ -35,8 +35,8 @@ class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecyclerViewA
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
         holder.mTitleView.setText(mValues.get(position).volumeInfo.getTitle());
-        if (mValues.get(position).volumeInfo.getImageLinks() != null)
-            Picasso.with(context).load(mValues.get(position).volumeInfo.getImageLinks().thumbnail)
+            Picasso.with(context).load(mValues.get(position).volumeInfo.getImageLinks() != null ?
+                    mValues.get(position).volumeInfo.getImageLinks().thumbnail : "bad link")
                     .placeholder(R.drawable.placeholder)
                     .error(R.drawable.error)
                     .fit()
