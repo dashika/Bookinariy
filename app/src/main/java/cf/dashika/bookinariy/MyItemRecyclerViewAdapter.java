@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import cf.dashika.bookinariy.ItemFragment.OnListFragmentInteractionListener;
 import cf.dashika.bookinariy.Model.Item;
 
 import java.util.List;
@@ -19,11 +18,9 @@ class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecyclerViewA
 
     private Context context;
     private final List<Item> mValues;
-    private final OnListFragmentInteractionListener mListener;
 
-    MyItemRecyclerViewAdapter(Context context, List<Item> items, OnListFragmentInteractionListener listener) {
+    MyItemRecyclerViewAdapter(Context context, List<Item> items) {
         mValues = items;
-        mListener = listener;
         this.context = context;
     }
 
@@ -42,15 +39,8 @@ class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecyclerViewA
             Picasso.with(context).load(mValues.get(position).volumeInfo.getImageLinks().thumbnail)
                     .placeholder(R.drawable.placeholder)
                     .error(R.drawable.error)
+                    .fit()
                     .into(holder.simpleDraweeView);
-        holder.mView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (null != mListener) {
-                    mListener.onListFragmentInteraction(holder.mItem);
-                }
-            }
-        });
     }
 
     @Override

@@ -1,19 +1,11 @@
 package cf.dashika.bookinariy;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.widget.Toast;
 
-import java.util.ArrayList;
-
-import cf.dashika.bookinariy.Model.Item;
 import cf.dashika.bookinariy.Util.Events;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;

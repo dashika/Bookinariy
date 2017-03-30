@@ -1,4 +1,5 @@
 package cf.dashika.bookinariy.Util;
+
 import cf.dashika.bookinariy.Model.Volumes;
 
 /**
@@ -7,7 +8,8 @@ import cf.dashika.bookinariy.Model.Volumes;
 
 public class Events {
 
-    private Events(){}
+    private Events() {
+    }
 
     public static class setVolumes {
         public final Volumes volumes;
