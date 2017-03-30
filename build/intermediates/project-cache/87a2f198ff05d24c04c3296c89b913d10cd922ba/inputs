@@ -1,0 +1,6 @@
+COMMAND=PREDEX_LIBRARY_TO_DEX_ARCHIVE
+FILE_PATH=/home/programer/Desktop/t/Bookinariy/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar
+FILE_HASH=0f10b4d962a990530865d7c92539957ecbb85672
+DX_VERSION=1.12
+JUMBO_MODE=true
+OPTIMIZE=true
