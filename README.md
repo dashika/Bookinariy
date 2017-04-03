@@ -1,6 +1,7 @@
 # Bookinariy
 
 Simple example, show how to work with Google Books API.
+This program find books by the name and author in the Google Books.
 ---
 ## DEMO
 
