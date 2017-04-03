@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="rxbus-1.0.5">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/bf59a549d7e3879346dc0ebc8fc2aee010dda1b6/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/bf59a549d7e3879346dc0ebc8fc2aee010dda1b6/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/ce3c722042a71f9e8e15c3705f5413ec8931e095/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/ce3c722042a71f9e8e15c3705f5413ec8931e095/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

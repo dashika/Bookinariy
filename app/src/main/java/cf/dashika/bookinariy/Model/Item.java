@@ -9,6 +9,9 @@ import android.os.Parcelable;
 public class Item implements Parcelable {
     public VolumeInfo volumeInfo;
 
+
+    public AccessInfo accessInfo;
+
     @Override
     public int describeContents() {
         return 0;
@@ -17,6 +20,8 @@ public class Item implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeParcelable(this.volumeInfo, flags);
+
+        dest.writeParcelable(this.accessInfo,flags);
     }
 
     public Item() {
@@ -24,6 +29,8 @@ public class Item implements Parcelable {
 
     protected Item(Parcel in) {
         this.volumeInfo = in.readParcelable(VolumeInfo.class.getClassLoader());
+
+        this.accessInfo = in.readParcelable(AccessInfo.class.getClassLoader());
     }
 
     public static final Parcelable.Creator<Item> CREATOR = new Parcelable.Creator<Item>() {

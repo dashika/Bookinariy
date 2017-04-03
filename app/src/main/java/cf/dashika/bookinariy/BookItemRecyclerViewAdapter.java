@@ -1,6 +1,7 @@
 package cf.dashika.bookinariy;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,7 +33,7 @@ class BookItemRecyclerViewAdapter extends RecyclerView.Adapter<BookItemRecyclerV
     }
 
     @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         holder.mItem = mValues.get(position);
         holder.mTitleView.setText(mValues.get(position).volumeInfo.getTitle());
             Picasso.with(context).load(mValues.get(position).volumeInfo.getImageLinks() != null ?
@@ -41,6 +42,14 @@ class BookItemRecyclerViewAdapter extends RecyclerView.Adapter<BookItemRecyclerV
                     .error(R.drawable.error)
                     .fit()
                     .into(holder.simpleDraweeView);
+        holder.mTitleView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,ReadBookActivity.class);
+                intent.putExtra(context.getString(R.string.webReaderLink), mValues.get(position).accessInfo.getWebReaderLink());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

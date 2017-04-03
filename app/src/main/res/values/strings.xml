@@ -2,7 +2,10 @@
     <string name="app_name">Bookinariy</string>
     <string name="title_activity_book">BookActivity</string>
     <string name="title">Title</string>
-    <string name="volumes_fields">items(volumeInfo(title,description,imageLinks))</string>
+    <string name="volumes_fields">items(volumeInfo(title,imageLinks),accessInfo(webReaderLink))</string>
     <string name="loading">Loading.Please wait...</string>
     <string name="srcbook">srcBook</string>
+    <string name="webReaderLink">WebReaderLink</string>
+    <string name="error">Error</string>
+    <string name="open_book">Book opening</string>
 </resources>

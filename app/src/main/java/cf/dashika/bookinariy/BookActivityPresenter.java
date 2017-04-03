@@ -37,7 +37,8 @@ public class BookActivityPresenter {
             if (fromBegin) BookingApplication.get().getItemArrayList().clear();
             mProgressDialog.show();
             Call<Volumes> call = BookingApplication.get().getmBooksVolumesService().getVolumes(query,
-                    activity.getString(R.string.volumes_fields), BookingApplication.get().getItemArrayList().size() + "");
+                   activity.getString(R.string.volumes_fields),
+                    BookingApplication.get().getItemArrayList().size() + "");
             call.enqueue(new Callback<Volumes>() {
                 @Override
                 public void onResponse(Call<Volumes> call, Response<Volumes> response) {

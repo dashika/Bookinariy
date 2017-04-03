@@ -12,13 +12,6 @@ import android.os.Parcelable;
          this.title = title;
      }
 
-     public String getDescription() {
-         return description;
-     }
-
-     public void setDescription(String description) {
-         this.description = description;
-     }
 
      public ImageLinks getImageLinks() {
          return imageLinks;
@@ -29,7 +22,6 @@ import android.os.Parcelable;
      }
 
      private String title;
-     private String description;
      private ImageLinks imageLinks;
 
     @Override
@@ -40,7 +32,6 @@ import android.os.Parcelable;
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.title);
-        dest.writeString(this.description);
         dest.writeParcelable(this.imageLinks, flags);
     }
 
@@ -49,7 +40,6 @@ import android.os.Parcelable;
 
     protected VolumeInfo(Parcel in) {
         this.title = in.readString();
-        this.description = in.readString();
         this.imageLinks = in.readParcelable(ImageLinks.class.getClassLoader());
     }
 
