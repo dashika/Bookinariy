@@ -14,12 +14,12 @@ import cf.dashika.bookinariy.Model.Item;
 
 import java.util.List;
 
-class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder> {
+class BookItemRecyclerViewAdapter extends RecyclerView.Adapter<BookItemRecyclerViewAdapter.ViewHolder> {
 
     private Context context;
     private final List<Item> mValues;
 
-    MyItemRecyclerViewAdapter(Context context, List<Item> items) {
+    BookItemRecyclerViewAdapter(Context context, List<Item> items) {
         mValues = items;
         this.context = context;
     }

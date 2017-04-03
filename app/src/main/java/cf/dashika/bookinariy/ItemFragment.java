@@ -1,6 +1,5 @@
 package cf.dashika.bookinariy;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
@@ -20,7 +19,7 @@ import rx.functions.Action1;
 
 public class ItemFragment extends Fragment {
 
-    private MyItemRecyclerViewAdapter adapter;
+    private BookItemRecyclerViewAdapter adapter;
 
     public ItemFragment() {
     }
@@ -81,7 +80,7 @@ public class ItemFragment extends Fragment {
                 }
             };
             recyclerView.addOnScrollListener(scrollListener);
-            adapter = new MyItemRecyclerViewAdapter(getActivity(), BookingApplication.get().getItemArrayList());
+            adapter = new BookItemRecyclerViewAdapter(getActivity(), BookingApplication.get().getItemArrayList());
             recyclerView.setAdapter(adapter);
         }
         return view;
